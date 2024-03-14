@@ -427,14 +427,16 @@ input[name="r"] {
 }
 
 .prices {
-  height: 90vh;
-  width: 1200px;
+  height: 90%;
+  width: 90%;
+  max-width: 1200px;
   margin: 20px auto;
   margin-top: 100px;
   margin-bottom: 20px;
   border-radius: 5px;
   background-color: rgba(249, 249, 249, 0.85);
   box-shadow: 0px 4px 25px -4px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
 }
 
 .prices > .prices-text {
@@ -470,6 +472,7 @@ input[name="r"] {
 }
 
 .booking-body {
+  position: relative;
   margin-top: 30px;
 }
 
