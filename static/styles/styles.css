@@ -485,7 +485,7 @@ input[name="r"] {
   margin-bottom: 10px;
 }
 
-.items-container-gray {
+.items-container:nth-child(even) {
   display: flex;
   justify-content: space-between;
   background-color: #c6c6c6;
@@ -495,7 +495,7 @@ input[name="r"] {
   padding: 10px;
 }
 
-.items-container-white {
+.items-container:nth-child(odd) {
   display: flex;
   justify-content: space-between;
   background-color: #ebebeb;
@@ -511,6 +511,7 @@ input[name="r"] {
   margin-left: 35px;
   background-color: #bebebe;
   width: 450px;
+  height: 500px;
   padding: 20px;
   border-radius: 5px;
 }
@@ -572,6 +573,7 @@ input[name="r"] {
   margin-top: 150px;
   display: grid;
   justify-content: center;
+  align-items: center;
 }
 
 .container-serv {
@@ -579,8 +581,8 @@ input[name="r"] {
   background-color: rgba(249, 249, 249, 0.85);
   box-shadow: 0px 4px 25px -4px rgba(0, 0, 0, 0.2);
   display: flex;
-  height: 400px;
-  width: 900px;
+  height: 25vh;
+  width: 70vh;
   overflow: hidden;
   margin-bottom: 35px;
   border-radius: 5px;
