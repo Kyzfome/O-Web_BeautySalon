@@ -1,5 +1,12 @@
 const buttons = document.querySelectorAll(".category-button");
 
+document.addEventListener("DOMContentLoaded", function () {
+  const clickedButtonIndex = localStorage.getItem("clickedButtonIndex");
+  console.log(clickedButtonIndex);
+  buttons[clickedButtonIndex].click();
+  buttons[clickedButtonIndex].click();
+});
+
 const hairCutsData = [
   { name: "Стрижка жіноча + укладка", price: "1 000 ₴" },
   { name: "Стрижка чубчика", price: "300 ₴" },
