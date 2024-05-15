@@ -24,6 +24,7 @@ h3 {
   background-color: rgba(249, 249, 249, 0.85);
   box-shadow: 0px 4px 25px -4px rgba(0, 0, 0, 0.08);
   z-index: 10001;
+  width: 100vw;
 }
 .nav-bar {
   display: flex;
@@ -68,7 +69,7 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 99999;
   background-color: rgba(0, 0, 0, 0.6);
@@ -104,16 +105,15 @@ h3 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 10px solid #fff;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .slider-container {
-  display: flex;
+  position: relative;
   width: 100%;
-  height: 800px;
+  height: 100vh;
 }
 
 .middle {
@@ -160,7 +160,7 @@ input[name="r"] {
 
 .slide {
   position: relative;
-  width: 25%;
+  width: 100vw;
   transition: all 0.6s ease;
 }
 
@@ -483,6 +483,7 @@ input[name="r"] {
 }
 
 .footer {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -800,12 +801,96 @@ input[name="r"] {
     width: 100%;
   }
 
+  .main-text {
+    font-size: 20px;
+    width: 100%;
+  }
+
   .second-text {
     font-size: 20px;
-    padding: 10px;
+    padding: 0;
+  }
+
+  .services {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
   }
 
   .nav-bar {
-    height: auto;
+    height: 55px;
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+
+  .serv-container {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+  }
+
+  .serv-text-second {
+    background-color: rgba(249, 249, 249, 0.5);
+    font-size: 10px;
+    bottom: 0;
+    padding: 2px 5px;
+  }
+
+  .background-image {
+    filter: blur(0px);
+  }
+
+  .links > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .links > ul a {
+    font-size: 12px;
+  }
+
+  .links > ul p {
+    font-size: 12px;
+  }
+
+  .salon-name {
+    margin-right: 0;
+  }
+
+  .salon-name > a {
+    font-size: 5px;
+    font-weight: bold;
+  }
+
+  .slide h2 {
+    font-size: 15px;
+    top: 40%;
+  }
+
+  .slide p {
+    font-size: 10px;
+    padding: 20px;
+    top: 55%;
+    text-align: center;
+  }
+
+  .slide {
+    height: 200px;
+  }
+
+  .slider-container {
+    margin-top: 50px;
+    height: 200px;
+  }
+
+  .online-res-button {
+    font-size: 10px;
+    padding: 5px 10px;
   }
 }
