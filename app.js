@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   buttons[clickedButtonIndex].click();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  reservation();
+});
+
 const hairCutsData = [
   { name: "Стрижка жіноча + укладка", price: "1 000 ₴" },
   { name: "Стрижка чубчика", price: "300 ₴" },
@@ -281,13 +285,47 @@ const reservationTimes = [
   "13:30",
 ];
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const name = document.querySelector("#name").value;
-  const phone = document.querySelector("#phone").value;
+function reservation() {
+  const isLogin = localStorage.getItem("isLogin");
 
-  const massage = `Ваше бронювання: ${name}, ${phone}. Ваш час: ${
-    reservationTimes[Math.floor(Math.random() * reservationTimes.length)]
-  }`;
-  alert(massage);
-});
+  if (isLogin === "true") {
+    const parentElement = document.querySelector(".reservation-form");
+    const formName = document.querySelector("#name");
+    const formPhone = document.querySelector("#phone");
+    const labelForm = document.querySelector(".form-label");
+    const labelForm1 = document.querySelector(".form-label1");
+    labelForm1.style.display = "none";
+    labelForm.style.display = "none";
+    formName.style.display = "none";
+    formPhone.style.display = "none";
+
+    const loginText = document.createElement("p");
+    loginText.textContent =
+      "Ви увійшли до свогой облікового запису, тому при натисненні на кнопку нижче, ви будете зареєстровані автоматично за вашими персональними данними.";
+
+    parentElement.appendChild(loginText);
+
+    const button = document.querySelector("#reservation-button");
+
+    button.addEventListener("click", () => {
+      const name = localStorage.getItem("name");
+      const phone = localStorage.getItem("phone");
+
+      const massage = `Ваше бронювання: ${name}, ${phone}. Ваш час: ${
+        reservationTimes[Math.floor(Math.random() * reservationTimes.length)]
+      }`;
+      alert(massage);
+    });
+  } else {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = document.querySelector("#name").value;
+      const phone = document.querySelector("#phone").value;
+
+      const massage = `Ваше бронювання: ${name}, ${phone}. Ваш час: ${
+        reservationTimes[Math.floor(Math.random() * reservationTimes.length)]
+      }`;
+      alert(massage);
+    });
+  }
+}

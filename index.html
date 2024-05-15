@@ -10,6 +10,14 @@
       href="static/images/icon.ico"
       type="image/x-icon"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -26,55 +34,74 @@
             <a href="prices.html">Ціни</a>
             <a href="specialist.html">Фахівці</a>
             <a href="contact.html">Контакти</a>
+            <p id="login">Увійти</p>
           </ul>
         </div>
       </div>
     </header>
-    <div class="slider middle">
-      <div class="slides">
-        <input type="radio" name="r" id="r1" checked />
-        <input type="radio" name="r" id="r2" />
-        <input type="radio" name="r" id="r3" />
-        <input type="radio" name="r" id="r4" />
 
-        <div class="slide s1">
-          <h2>FLAWLESS BEAUTY</h2>
-          <p>Робимо так, аби ви почували себе впевнено та привабливо</p>
-          <a href=""><button>Online запис</button></a>
-          <img src="static/images/slider1.jpg" alt="slider1" />
-        </div>
-        <div class="slide">
-          <h2>Ідеальний манікюр</h2>
-          <p>За безпеку відповідає автоклав IS YESON</p>
-          <a href=""><button>Online запис</button></a>
-          <img src="static/images/slider2.jpg" alt="slider2" />
-        </div>
-        <div class="slide">
-          <div class="slide-text">
-            <h2>Відкриття трьох салонів у Варшаві</h2>
-            <p>Першокласна франшиза українського салону краси у Варшаві!</p>
-            <a href=""><button>Online запис</button></a>
+    <div id="modal" class="modal">
+      <div class="modal__box">
+        <div class="booking-area">
+          <div class="reservation-text">
+            <h2>Увійти до особистого кабінету</h2>
           </div>
-          <img src="static/images/slider3.jpg" alt="slider3" />
+          <form class="reservation-form">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required />
+            <button type="submit">Увійти</button>
+          </form>
         </div>
-        <div class="slide">
-          <div class="slide-text1">
-            <h2>Фарбування волосся будь-якої складності</h2>
-            <p>Даруємо стрижку при записі на фарбування та догляд</p>
-            <a href=""><button>Online запис</button></a>
-          </div>
-          <img src="static/images/slider4.jpg" alt="slider4" />
-        </div>
-      </div>
-
-      <div class="navigation">
-        <label for="r1" class="bar"></label>
-        <label for="r2" class="bar"></label>
-        <label for="r3" class="bar"></label>
-        <label for="r4" class="bar"></label>
       </div>
     </div>
-    <div class="spacer"></div>
+    <div class="slider-container">
+      <div class="slider middle">
+        <div class="slides">
+          <input type="radio" name="r" id="r1" checked />
+          <input type="radio" name="r" id="r2" />
+          <input type="radio" name="r" id="r3" />
+          <input type="radio" name="r" id="r4" />
+
+          <div class="slide s1">
+            <h2>FLAWLESS BEAUTY</h2>
+            <p>Робимо так, аби ви почували себе впевнено та привабливо</p>
+            <button class="online-res-button">Online запис</button>
+            <img src="static/images/slider1.jpg" alt="slider1" />
+          </div>
+          <div class="slide">
+            <h2>Ідеальний манікюр</h2>
+            <p>За безпеку відповідає автоклав IS YESON</p>
+            <button class="online-res-button">Online запис</button>
+            <img src="static/images/slider2.jpg" alt="slider2" />
+          </div>
+          <div class="slide">
+            <div class="slide-text">
+              <h2>Відкриття трьох салонів у Варшаві</h2>
+              <p>Першокласна франшиза українського салону краси у Варшаві!</p>
+              <button class="online-res-button">Online запис</button>
+            </div>
+            <img src="static/images/slider3.jpg" alt="slider3" />
+          </div>
+          <div class="slide">
+            <div class="slide-text1">
+              <h2>Фарбування волосся будь-якої складності</h2>
+              <p>Даруємо стрижку при записі на фарбування та догляд</p>
+              <button class="online-res-button">Online запис</button>
+            </div>
+            <img src="static/images/slider4.jpg" alt="slider4" />
+          </div>
+        </div>
+
+        <div class="navigation">
+          <label for="r1" class="bar"></label>
+          <label for="r2" class="bar"></label>
+          <label for="r3" class="bar"></label>
+          <label for="r4" class="bar"></label>
+        </div>
+      </div>
+    </div>
     <div class="services">
       <div class="serv-text">
         <h1>ПОСЛУГИ</h1>
@@ -221,5 +248,7 @@
       </div>
     </footer>
     <script src="mainApp.js"></script>
+    <script src="log.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
