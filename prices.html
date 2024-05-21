@@ -10,6 +10,17 @@
       href="static/images/icon.ico"
       type="image/x-icon"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Df0dqC_N-lEzknMz1",
+        });
+      })();
+    </script>
   </head>
   <body>
     <header class="header">
@@ -80,6 +91,8 @@
               <input type="text" id="name" name="name" required />
               <label class="form-label1" for="phone">Телефон:</label>
               <input type="tel" id="phone" name="phone" required />
+              <label class="form-label2" for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
               <button id="reservation-button" type="submit">Забронювати</button>
             </form>
           </div>
@@ -111,5 +124,6 @@
       </div>
     </footer>
     <script src="app.js"></script>
+    <script src="reservation.js"></script>
   </body>
 </html>
