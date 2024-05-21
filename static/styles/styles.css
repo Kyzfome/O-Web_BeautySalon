@@ -838,10 +838,11 @@ input[name="r"] {
   }
 
   .about-container {
-    width: 100%;
+    width: 90%;
   }
 
   .main-text {
+    padding: 0;
     width: 100%;
   }
 
