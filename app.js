@@ -288,7 +288,7 @@ const reservationTimes = [
 function reservation() {
   const isLogin = localStorage.getItem("isLogin");
 
-  if (isLogin === "true") {
+  if (isLogin === "truee") {
     const parentElement = document.querySelector(".reservation-form");
     const formName = document.querySelector("#name");
     const formPhone = document.querySelector("#phone");
