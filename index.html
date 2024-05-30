@@ -11,14 +11,32 @@
       href="static/images/icon.ico"
       type="image/x-icon"
     />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="preload" href="static/images/slider1.webp" as="image" />
   </head>
   <body>
     <header class="header">
@@ -69,7 +87,13 @@
             <h2>FLAWLESS BEAUTY</h2>
             <p>Робимо так, аби ви почували себе впевнено та привабливо</p>
             <button class="online-res-button">Online запис</button>
-            <img src="static/images/slider1.webp" alt="slider1" />
+            <picture>
+              <img
+                src="static/images/slider1.webp"
+                alt="slider1"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div class="slide">
             <h2>Ідеальний манікюр</h2>
